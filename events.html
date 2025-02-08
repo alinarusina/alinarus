@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Пример второй страницы сайта">
+    <title>События</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf7ca;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #094d1d;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: none;
+            color: rgb(12, 12, 12);
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2> <i>События</i></h2>
+    </header>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="#events.html">События</a>
+        <a href="blog.html">Блог</a>
+        <a href="scroll.html">Лента</a>
+        <a href="files.html">Файлы</a>
+        <a href="contact.html">Контакты</a>
+    </nav>
+    <main>
+        <h2>Актуально</h2>
+        <i>Форум профессионалов педагогического мастерства</i>
+        <h2>Прошедшие события</h2>
+        <i>Конференция "Психология спорта"</i> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales/ru.min.js"></script>
+<div id="calendar"></div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const calendarEl = document.getElementById('calendar');
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            locale: 'ru',
+            events: [
+                {
+                    title: 'Конференция',
+                    start: '2025-02-05'
+                },
+                {
+                    title: 'Мастер-класс',
+                    start: '2025-02-20'
+                }
+            ]
+        });
+        calendar.render();
+    });
+</script>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; <small>2025 SafronovAI. Все права защищены.</small></p>
+    </footer>
+</body>
+</html>
